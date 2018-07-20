@@ -1,167 +1,126 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>SimpleMoney</title>
+    </head>
+    <body>
+        
+        <div class="top">
+            <div class="budget">
+                <div class="budget__title">
+                    Available Budget in <span class="budget__title--month">%Month%</span>:
+                </div>
+                
+                <div class="budget__value">+ 2,345.64</div>
+                
+                <div class="budget__income clearfix">
+                    <div class="budget__income--text">Income</div>
+                    <div class="right">
+                        <div class="budget__income--value">+ 4,300.00</div>
+                        <div class="budget__income--percentage">&nbsp;</div>
+                    </div>
+                </div>
+                
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses--text">Expenses</div>
+                    <div class="right clearfix">
+                        <div class="budget__expenses--value">- 1,954.36</div>
+                        <div class="budget__expenses--percentage">45%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="inc" selected>+</option>
+                        <option value="exp">-</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Add description">
+                    <input type="number" class="add__value" placeholder="Value">
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                </div>
+            </div>
+            
+            <div class="container clearfix">
+                <div class="income">
+                    <h2 class="icome__title">Income</h2>
+                    
+                    <div class="income__list">
+                       
+                        <!--
+                        <div class="item clearfix" id="income-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item clearfix" id="income-1">
+                            <div class="item__description">Sold car</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 1,500.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="expenses">
+                    <h2 class="expenses__title">Expenses</h2>
+                    
+                    <div class="expenses__list">
+                       
+                        <!--
+                        <div class="item clearfix" id="expense-0">
+                            <div class="item__description">Apartment rent</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 900.00</div>
+                                <div class="item__percentage">21%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
 
-<html>
-	<!-- Header: Website title, charset, metaname, favicon, and stylesheet refrences. -->
-	<head>
-		<title>Capital One Mind Sumo Submission</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/police-light.png">
-		<!-- Apple's Proprietary Touch Icon to Support Apple Devies -->
-		<link rel="apple-touch-icon-precomposed" href="images/police-light.png">
-	</head>
-
-	<body>
-
-		<!-- Header of Body: First info presented to viewer; click button to continue. -->
-			<section id="header">
-				<header>
-					<h1>Capital One MindSumo Submission</h1>
-					<p>Optimizing and Predicting Emergency Calls</p>
-				</header>
-				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Let's Go!</a>
-				</footer>
-			</section>
-
-		<!-- Banner: Highlights outline of following website; click button to continue.-->
-			<section id="banner">
-				<header>
-					<h2>Deliverables</h2>
-				</header>
-				<p style="padding-left: 80px; padding-right: 80px; padding-top: 60px; padding-bottom: 60px;">The goal of this website is to present a solution to the following problem: How can we optimize and predict emergency call dispatches in San Francisco? This website displays graphs of three interesting metrics of the given data, includes two heat maps, and answers the questions, "Which dispatch is the most likely to be required for a given emergency?" and "Which areas take the longest time for dispatched vehicles to reach?" The objective of this website is to not only display answers to these questions, but present them in a fashion that is responsive, simple to navigate, and, above all, <strong>beautiful.</strong></p>
-				<footer>
-					<a href="#first" class="button style2 scrolly">Proceed to Answers</a>
-				</footer>
-			</section>
-
-		<!-- Graph 1: Count of Need of ALS Unit On Call-->
-			<article id="first" class="container box style1 right">
-				<img class="image fit" src="images/graph1-min.png" alt="" />
-				<div class="inner">
-					<header>
-						<h2>Graph 1:
-						Number of Calls Needing ALS</h2>
-					</header>
-					<p>Nearly 65% of emergency calls recorded needed an ALS (Advanced Life Support) ambulance at the scene of the emergency.</p>
-				</div>
-			</article>
-
-		<!-- Graph 2: Count of Type of Unit Dispatched -->
-			<article class="container box style1 left">
-				<img class="image fit" src="images/graph2-min.png" alt="" />
-				<div class="inner">
-					<header>
-						<h2>Graph 2:<br />
-						Types of Units Dispatched</h2>
-					</header>
-					<p>Given any address or time, a majority of calls that will be required are fire engines, with medical support being the second-most needed.</p>
-				</div>
-			</article>
-
-		<!-- Graph 3: Final Destination of Dispatched Vehicle -->
-			<article id="first" class="container box style1 right">
-				<img class="image fit" src="images/graph3-min.png" alt="" />
-				<div class="inner">
-					<header>
-						<h2>Graph 3:<br />
-						Final Destination of Dispatch</h2>
-					</header>
-					<p>Most emergency calls resulted in a "Code 2 Transport" or "Fire." Both categories of problems are resolved by the fire department.</p>
-				</div>
-			</article>
-
-		<!-- Heatmap of San Francisco based crime frequency. -->
-			<article class="container box style1 left">
-				<img class="image fit" src="images/heatmap-min.png" alt="" />
-				<div class="inner">
-					<header>
-						<h2>Heatmap: <br /> Crime Frequency</h2>
-					</header>
-					<p>Heatmap displaying the frequency of crime in San Francisco. Areas with a higher population density tend to have a higher rate of crime (red hues) compared to areas of lower population.</p>
-				</div>
-			</article>
-
-		<!-- Interactive Heatmap of San Francisco crime data provided by SFPD. -->
-			<article class="container box style3">
-				<header>
-					<h2>Interactive Heatmap of San Francisco Crime</h2>
-					<p>Interactive heatmap of crime reports provided by the San Francisco Police Department. Updated live as police reports become publicly available.</p>
-				</header>
-
-				<section>
-					      <div>
-					      	<iframe width="100%" title="SF Crime Heat Map" height="600px" src="https://data.sfgov.org/w/q6gg-sa2p/ikek-yizv?cur=rRqv5fmyLSp&from=root" frameborder="0"scrolling="no"><a href="https://data.sfgov.org/Public-Safety/SF-Crime-Heat-Map/q6gg-sa2p" title="SF Crime Heat Map" target="_blank">SF Crime Heat Map</a>
-					      	</iframe>
-					      </div>    
-				</section>
-			</article>
-
-
-			<!-- Text Boxes Explaining Two Other Answers. Using <article> tag to seperate out two answers in accordance to CSS and JavaScript.-->
-
-			<!-- Answer 2: Areas that Take the Longest Time to Dispatch -->
-			<article class="container box style3">
-				<header>
-					<h2>Areas that Take the Longest Time to Dispatch</h2>
-					<p>And How This Can Be Reduced</p>
-				</header>
-
-				<section>
-					<header>
-						<h3>The Answer is Rather Unsurprising</h3>
-						<!-- <p>This is a subtitle</p> -->
-					</header>
-					<p>The areas that take the longest time for dispatch vehicles to reach are areas that are the furthest away from main dispatch centers. This is true for absolute distance from the dispatch center to the area in need (the distance as the crow flies) and is also true for distance in road miles as well. A majority of major roads in San Francisco are one-way, meaning it can be difficult to reach certain spots within the city.</p>
-
-					<header>
-						<h3>However, These Problems Can Be Solved</h3>
-					</header>
-					<p>One of the ways this problem can be solved is to have more, small-scale dispatch centers around the city, especially in places that are not well received by current centers. This does not have to mean building full-scale dispatch centers in these areas; it can be as simple as having a number of emergency service vehicles and first-respondents on street corners, ready to be deployed if need be before backup from larger dispatch centers can help.</p>
-				</section>
-			</article>
-
-			<!--Answer 3: Preparing for the Future -->
-
-			<article class="container box style3">
-				<header>
-					<h2>Preparing for the Future</h2>
-					<p></p>
-				</header>
-
-				<section>
-					<header>
-						<h3>Problem: A Rising Increase in Dispatch Calls</h3>
-						<!-- <p>This is a subtitle</p> -->
-					</header>
-					<p>There are a number of areas that are experiencing an increase in dispatch calls around San Francisco. These areas tend to be where the average income is lower than neighboring areas combined with a relatively large population in a small amount of area. These calls range from low priority calls to emergency calls that require an ambulance directed to the hospital. In my opinion, the latter are the most important of the types of calls that are experiencing an increase and should be given the most attention in working towards building a solution to decrease the overall rise in emergency calls.</p>
-
-					<header>
-						<h3>Solution: Wealth Center in Impacted Areas</h3>
-					</header>
-					<p>As I see it, it is rather unreasonable to build entirely new dispatch centers or hospitals to reach areas that are experiencing an increase of emergency medical calls. Even though it would help the community greatly, the cost of finding land for and building such centers would outweigh the benefits it may provide. Instead, as a compromise, smaller "Wealth Centers" could be created instead. These do not need to take up nearly as much space or cost nearly as much as regular hospitals, but it can still provide ambulances and first respondent vehicles to help combat the rise in medical-related dispatch calls.</p>
-				</section>		
-			</article>
-
-		<!-- Official End of Website; Footer Following -->		
-
-		<section id="footer">
-			<div class="copyright">
-				<ul class="menu">
-					<li>Made with love, passion, and a little HTML5</li><li>Personal Website: <a href="http://www.thenickhardwick.info">About Nick Hardwick
-		</section>
-
-		<!-- Scripts from JavaScript-->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-
-<!-- That's all, folks! -->
-
+                        <div class="item clearfix" id="expense-1">
+                            <div class="item__description">Grocery shopping</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 435.28</div>
+                                <div class="item__percentage">10%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
 </html>
